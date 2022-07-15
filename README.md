@@ -2,4 +2,4 @@
 <img src="./img/Preview.png">
 
 ###### USED:
-[PySimpleGUI](https://github.com/PySimpleGUI/PySimpleGUI)
+* [PySimpleGUI](https://github.com/PySimpleGUI/PySimpleGUI)
