@@ -1,33 +1,33 @@
-import PySimpleGUIQt as Sg
+import PySimpleGUIQt as sg
 
 
 def main():
-    Sg.theme('Dark')
+    sg.theme('Dark')
 
     FSIZE = [
         [
-            Sg.Radio('MB', '-SIZE-', key='-MB-'),
-            Sg.Radio('GB', '-SIZE-', default=True, key='-GB-'),
+            sg.Radio('MB', '-SIZE-', key='-MB-'),
+            sg.Radio('GB', '-SIZE-', default=True, key='-GB-'),
         ],
-        [Sg.InputText(key='-SIZE-')],
+        [sg.InputText(key='-SIZE-')],
     ]
 
     ISPEED = [
         [
-            Sg.Radio('KB/s', '-SPEED-', key='-KBs-'),
-            Sg.Radio('Mbit/s', '-SPEED-', key='-Mbs-'),
-            Sg.Radio('MB/s', '-SPEED-', default=True, key='-MBs-'),
+            sg.Radio('KB/s', '-SPEED-', key='-KBs-'),
+            sg.Radio('Mbit/s', '-SPEED-', key='-Mbs-'),
+            sg.Radio('MB/s', '-SPEED-', default=True, key='-MBs-'),
         ],
-        [Sg.InputText(key='-SPEED-')],
+        [sg.InputText(key='-SPEED-')],
     ]
 
     layout = [
-        [Sg.Frame('File Size', FSIZE)],
-        [Sg.Frame('Internet Speed', ISPEED)],
-        [Sg.Button('Submit'), Sg.Text('(H:M:S):'), Sg.Text(key='-TIME-')]
+        [sg.Frame('File Size', FSIZE)],
+        [sg.Frame('Internet Speed', ISPEED)],
+        [sg.Button('Submit'), sg.Text('(H:M:S):'), sg.Text(key='-TIME-')]
     ]
 
-    window = Sg.Window(
+    window = sg.Window(
         'yuuCalc',
         layout,
         resizable=False,
@@ -36,7 +36,7 @@ def main():
     while True:
         event, values = window.read()
         print(event, values)
-        if event == Sg.WIN_CLOSED:
+        if event == sg.WIN_CLOSED:
             break
         if event == 'Submit':
             if values['-SIZE-']:
