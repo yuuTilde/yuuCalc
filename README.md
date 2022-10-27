@@ -1,5 +1,6 @@
-# yuuCalc [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
-<img src="./img/Preview.png">
-
-###### USED:
-* [PySimpleGUI](https://github.com/PySimpleGUI/PySimpleGUI)
+# yuuCalc
+```
+  File Size (GB): 123
+  Download Speed (Mbit): 456
+  Result: 0.599415h
+```
